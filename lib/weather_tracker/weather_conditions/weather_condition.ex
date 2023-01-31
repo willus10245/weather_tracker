@@ -4,6 +4,7 @@ defmodule WeatherTracker.WeatherConditions.WeatherCondition do
 
   @allowed_fields [
     :altitude_m,
+    :humidity_rh,
     :pressure_pa,
     :temperature_c,
     :co2_eq_ppm,
@@ -16,6 +17,7 @@ defmodule WeatherTracker.WeatherConditions.WeatherCondition do
   schema "weather_conditions" do
     field :timestamp, :naive_datetime
     field :altitude_m, :decimal
+    field :humidity_rh, :decimal
     field :pressure_pa, :decimal
     field :temperature_c, :decimal
     field :co2_eq_ppm, :decimal
